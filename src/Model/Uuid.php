@@ -47,9 +47,9 @@ class Uuid extends \Phalcon\Mvc\Model\Validator implements \Phalcon\Mvc\Model\Va
                 $message = "Field :field must be one of the following UUID versions: :versions";
             }
 
-            $replacePairs = [":field" => $label, ":versions" => implode(", ", $allowedVersions)];
+            $replacePairs = [":field" => $field, ":versions" => implode(", ", $allowedVersions)];
 
-            $validation->appendMessage(strtr($message, $replacePairs), $field, "Uuid");
+            $this->appendMessage(strtr($message, $replacePairs), $field, "Uuid");
 
             return false;
         }
