@@ -4,6 +4,14 @@ namespace Sid\Phalcon\Validators;
 
 class Timezone extends \Phalcon\Validation\Validator
 {
+    /**
+     * @param \Phalcon\Validation $validation
+     * @param string              $field
+     *
+     * @return boolean
+     *
+     * @throws \Phalcon\Validation\Exception
+     */
     public function validate(\Phalcon\Validation $validation, $field)
     {
         if (!is_string($field)) {
