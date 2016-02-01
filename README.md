@@ -9,7 +9,7 @@ Miscellaneous validators for use with the Phalcon framework.
 
 Install using Composer:
 
-```
+```json
 {
 	"require": {
 		"sidroberts/phalcon-validators": "dev-master"
